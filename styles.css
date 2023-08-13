@@ -75,6 +75,8 @@ body * {
   position: relative;
   display: flex;
   justify-content: center;
+
+  margin-top: 24px;
 }
 
 #switch button{
@@ -85,8 +87,9 @@ body * {
   border-radius: 50%;  
 
   position: absolute;
-  top: var(--position-switch);
+  top: 50%;
   right: var(--position-button);
+  transform: translateY(-50%);
 
   z-index: 100;
 }
@@ -106,7 +109,6 @@ body * {
 /* Links */
 ul {
   text-align: center;
-  margin-top: 8px;
   padding: 24px 0;
 }
 

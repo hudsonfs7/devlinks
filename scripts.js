@@ -5,8 +5,8 @@ function addClassToHtmlTag() {
   const img = document.querySelector('#profile img')
 
   if (htmlTag.classList.contains('light')) {
-    img.setAttribute('src', './assets/avatar-light.png')
+    img.setAttribute('src', './assets/avatar-hds.jpg')
   } else {
-    img.setAttribute('src', './assets/avatar.png')
+    img.setAttribute('src', './assets/avatar-hds.jpg')
   }
 }

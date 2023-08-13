@@ -40,7 +40,7 @@
 /* Body */
 body {
   background: var(--backgroud) no-repeat top center/cover;
-  color: var(--text-color);
+  height: 100vh;
 }
 
 body * {
@@ -48,7 +48,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0;
   padding: 24px;  
 
@@ -158,4 +159,14 @@ ul li:hover {
 footer{
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px){
+  :root {
+    --backgroud: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --backgroud: url(./assets/bg-desktop-light.jpg);
+  }
 }

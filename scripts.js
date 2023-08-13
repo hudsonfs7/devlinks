@@ -1,9 +1,12 @@
 function addClassToHtmlTag() {
-  var htmlTag = document.documentElement
+  const htmlTag = document.documentElement
+  htmlTag.classList.toggle('light')
 
-  if (!htmlTag.classList.contains('light')) {
-    htmlTag.classList.add('light')
+  const img = document.querySelector('#profile img')
+
+  if (htmlTag.classList.contains('light')) {
+    img.setAttribute('src', './assets/avatar-light.png')
   } else {
-    htmlTag.classList.remove('light')
+    img.setAttribute('src', './assets/avatar.png')
   }
 }

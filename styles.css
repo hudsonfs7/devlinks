@@ -2,30 +2,56 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: 'Inter', sans-serif;
-  color: #ffffff;
   list-style: none;
   text-decoration: none;
+
   
 }
 
+/* Modes */
+:root {  
+  --text-color: white;
+  --backgroud: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --bd-color: rgba(255, 255, 255, 0.10);
+  --light-color: rgba(255, 255, 255, 0.05);
+  --super-light-color: rgba(255, 255, 255, 0.01);
+  --switch-background: url(./assets/moon-stars.svg)
+}
+
+.light {
+  --text-color: black;
+  --backgroud: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --bd-color: rgba(0, 0, 0, 0.10);
+  --light-color: rgba(0, 0, 0, 0.05);
+  --super-light-color: rgba(0, 0, 0, 0.03);
+  --switch-background: url(./assets/sun.svg)
+}
+
+
+
+/* Body */
 body {
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--backgroud) no-repeat top center/cover;
+  color: var(--text-color);
+}
+
+body * {
+  color: var(--text-color);
 }
 
 #container {
   width: 360px;
   margin: 56px auto 0;
-  padding: 24px;
-  
+  padding: 24px;  
 
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: var(--super-light-color);
   border-radius: 10px;
-
-
 }
 
+/* Profile */
 #profile {
   text-align: center;
 }
@@ -39,6 +65,25 @@ body {
   line-height: 24px;
 }
 
+/* Switch */
+#switch button{
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: var(--text-color) var(--switch-background) no-repeat center;
+  border-radius: 50%;
+}
+
+#switch span{
+  display: block;
+  width: 62px;
+  height: 24px;
+  background-color: var(--bd-color);
+  border: solid 1px var(--stroke-color);
+  border-radius: 50px;
+}
+
+/* Links */
 ul {
   text-align: center;
   margin-top: 8px;
@@ -46,8 +91,8 @@ ul {
 }
 
 ul li {
-  background-color: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--bd-color);
+  border: 1px solid var(--stroke-color);
   margin-top: 14px;
   border-radius: 8px;
   padding: 16px 24px;
@@ -56,22 +101,20 @@ ul li {
   font-weight: 500;
 
   transition: background 0.3s;
-
 }
 
 ul li:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid #ffffff;
+  background-color: var(--light-color);
+  border: 1.5px solid var(--text-color);
 }
+
+/* Social Links */
 
 #social-links {
   display: flex;
   justify-content: center;
   padding: 24px;
   font-size: 24px;
-
-
-
 }
 
 #social-links a{
@@ -86,7 +129,7 @@ ul li:hover {
 
 
 #social-links a:hover{
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--light-color);
 }
 
 footer{

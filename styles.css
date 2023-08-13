@@ -17,7 +17,9 @@
   --bd-color: rgba(255, 255, 255, 0.10);
   --light-color: rgba(255, 255, 255, 0.05);
   --super-light-color: rgba(255, 255, 255, 0.01);
-  --switch-background: url(./assets/moon-stars.svg)
+  --switch-background: url(./assets/moon-stars.svg);
+  --position-switch: -5px;
+  --position-button: auto;
 }
 
 .light {
@@ -27,7 +29,10 @@
   --bd-color: rgba(0, 0, 0, 0.10);
   --light-color: rgba(0, 0, 0, 0.05);
   --super-light-color: rgba(0, 0, 0, 0.03);
-  --switch-background: url(./assets/sun.svg)
+  --switch-background: url(./assets/sun.svg);
+  --position-switch: -5px;
+  --position-button: -1px;
+
 }
 
 
@@ -66,12 +71,24 @@ body * {
 }
 
 /* Switch */
+#switch {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 #switch button{
   width: 32px;
   height: 32px;
   border: none;
-  background: var(--text-color) var(--switch-background) no-repeat center;
-  border-radius: 50%;
+  background: white var(--switch-background) no-repeat center;
+  border-radius: 50%;  
+
+  position: absolute;
+  top: var(--position-switch);
+  right: var(--position-button);
+
+  z-index: 100;
 }
 
 #switch span{
@@ -81,6 +98,9 @@ body * {
   background-color: var(--bd-color);
   border: solid 1px var(--stroke-color);
   border-radius: 50px;
+  -webkit-backdrop-filter: blur(4px);
+
+  position: relative;
 }
 
 /* Links */

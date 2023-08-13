@@ -2,12 +2,6 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.3-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/vscode-%5E1.12.0-blue.svg" />
-  <a href="https://github.com/maykbrito/theme-launchbase#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/maykbrito/theme-launchbase/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/maykbrito/theme-launchbase" />
-  </a>
 
 </p>
 

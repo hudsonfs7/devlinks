@@ -19,7 +19,7 @@
   --super-light-color: rgba(255, 255, 255, 0.01);
   --switch-background: url(./assets/moon-stars.svg);
   --position-switch: -5px;
-  --position-button: auto;
+  --position-button: 0px;
 }
 
 .light {
@@ -31,7 +31,7 @@
   --super-light-color: rgba(0, 0, 0, 0.03);
   --switch-background: url(./assets/sun.svg);
   --position-switch: -5px;
-  --position-button: -1px;
+  --position-button: 50%;
 
 }
 
@@ -87,13 +87,23 @@ body * {
   border: none;
   background: white var(--switch-background) no-repeat center;
   border-radius: 50%;  
-
+  left: 0px;
   position: absolute;
   top: 50%;
-  right: var(--position-button);
   transform: translateY(-50%);
 
   z-index: 100;
+
+  animation: slidenight 0.2s; 
+
+}
+
+.light #switch button {
+  animation: slidelight .2s forwards;  
+}
+
+#switch button:hover{
+  outline: 8px solid var(--light-color);
 }
 
 #switch span{
@@ -170,3 +180,25 @@ footer{
     --backgroud: url(./assets/bg-desktop-light.jpg);
   }
 }
+
+@keyframes slidelight {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slidenight {
+  from {
+    left: 50%;
+  }
+
+  to {
+    right: 0px;
+
+  }
+}
+

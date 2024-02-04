@@ -1,3 +1,6 @@
+const path = require('path')
+const caminho = path.join(__dirname, 'assets', 'avatar-hds.jpg')
+
 function addClassToHtmlTag() {
   const htmlTag = document.documentElement
   htmlTag.classList.toggle('light')
@@ -5,8 +8,8 @@ function addClassToHtmlTag() {
   const img = document.querySelector('#profile img')
 
   if (htmlTag.classList.contains('light')) {
-    img.setAttribute('src', '../assets/avatar-hds.jpg')
+    img.setAttribute('src', caminho)
   } else {
-    img.setAttribute('src', '../assets/avatar-hds.jpg')
+    img.setAttribute('src', caminho)
   }
 }

@@ -202,3 +202,15 @@ footer{
   }
 }
 
+ul li img {
+  width: 100px;
+  text-align: left;
+
+}
+
+ul li p {
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
